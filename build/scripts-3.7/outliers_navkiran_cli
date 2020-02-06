@@ -1,0 +1,15 @@
+#!python
+
+import sys
+from outliers_navkiran import remove_outliers
+
+arguments = sys.argv[1:]
+assert len(arguments) == 2, "Insufficient number of arguments provided"
+
+filename_in = arguments[0]
+filename_out = arguments[1]
+assert filename_in, "Input CSV filename must be provided"
+assert filename_out, "Output CSV filename must be provided"
+assert '.csv' in filename_in, "File extension must be .csv"
+assert '.csv' in filename_out, "File extension must be .csv"
+remove_outliers(filename_in, filename_out)
