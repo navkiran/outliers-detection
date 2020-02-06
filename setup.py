@@ -5,11 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="outliers_navkiran", 
-    version="0.0.5",
+    version="0.0.7",
     author="Navkiran Singh",
     author_email="nsingh2_be17@thapar.edu",
     description="Outlier Removal Using Z-score",
     url="https://github.com/navkiran/outliers_navkiran",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     py_modules=["outliers_navkiran"],
     package_dir={'':'src'},
     keywords = ['command-line', 'Outliers', 'outlier-removal','row-removal'],  
