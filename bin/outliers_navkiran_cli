@@ -12,4 +12,4 @@ assert filename_in, "Input CSV filename must be provided"
 assert filename_out, "Output CSV filename must be provided"
 assert '.csv' in filename_in, "File extension must be .csv"
 assert '.csv' in filename_out, "File extension must be .csv"
-detect_outliers(filename_in, filename_out)
+remove_outliers(filename_in, filename_out)

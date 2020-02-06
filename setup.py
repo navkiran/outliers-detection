@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="outliers_navkiran", 
-    version="0.0.1",
+    version="0.0.2",
     author="Navkiran Singh",
     author_email="nsingh2_be17@thapar.edu",
     description="Outlier Removal Using Z-score",
