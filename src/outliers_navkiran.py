@@ -19,4 +19,4 @@ def remove_outliers(incsv_filename, outcsv_filename):
     dataset.to_csv(outcsv_filename, index=False)
     print ('The no of rows removed:',len(data) - len(dataset))
 
-remove_outliers('data.csv','output.csv')
+
