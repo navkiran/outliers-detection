@@ -1,13 +1,12 @@
 import numpy as np
 import pandas as pd
 
-def remove_outliers(incsv_filename, outcsv_filename):
+def remove_outliers(incsv_filename, outcsv_filename,threshold=1.5):
 
     dataset = pd.read_csv(incsv_filename)	
     data = dataset.iloc[:,1:]  
 
     for i, row in data.iterrows():
-        threshold = 1.5
         mean = np.mean(row)
         std = np.std(row)
         for value in row:
@@ -18,5 +17,3 @@ def remove_outliers(incsv_filename, outcsv_filename):
             
     dataset.to_csv(outcsv_filename, index=False)
     print ('The no of rows removed:',len(data) - len(dataset))
-
-
