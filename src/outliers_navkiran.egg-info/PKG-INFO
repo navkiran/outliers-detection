@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: outliers-navkiran
-Version: 1.0.1
-Summary: Outlier Removal Using Z-score
+Version: 1.0.4
+Summary: Outlier Removal Using Z-score or IQR
 Home-page: https://github.com/navkiran/outliers_navkiran
 Author: Navkiran Singh
 Author-email: nsingh2_be17@thapar.edu
@@ -14,8 +14,11 @@ Description: # Library for removing outliers from pandas dataframe
         COE17
         Roll number: 101703365
         ```
-        Takes two inputs - filename of input csv, intended filename of output csv.
-        Third optional argument is threshold, by default it's 1.5.
+        Takes two inputs - filename of input csv, intended filename of output csv. 
+        
+        Two optional arguments - which must be provided together or left out.
+        Third argument is threshold, by default it's 1.5. Fourth argument is method - z_score or IQR.
+        
         Output is the number of rows removed from the input dataset. Resulting csv is saved as output.csv. 
         
         
@@ -27,16 +30,22 @@ Description: # Library for removing outliers from pandas dataframe
         ## Use via command line
         `outliers_navkiran_cli in.csv out.csv`
         
-        When providing custom threshold:
+        Defaults are 1.5 threshold and IQR.
+        
+        When providing custom threshold and method:
          
-        `outliers_navkiran_cli in.csv out.csv 1.5`
+        `outliers_navkiran_cli in.csv out.csv 3 z_score`
+        `outliers_navkiran_cli in.csv out.csv 3 IQR`
         
         First argument after outcli is the input csv filename from which the dataset is extracted. The second argument is for storing the final dataset after processing.
         
         ## Use in .py script
         ```
-        from outliers_navkiran import remove_outliers
-        remove_outliers('input.csv', 'output.csv',1.5)
+        from outliers_navkiran import remove_outliers_z,remove_outliers_iqr
+        # for using z-score
+        remove_outliers_z('input.csv', 'output.csv',1.5)
+        # for using IQR
+        remove_outliers_iqr('input.csv', 'output.csv',1.5)
         ```
         
         

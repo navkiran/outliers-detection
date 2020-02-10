@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!python
 
 import sys
 from outliers_navkiran import remove_outliers_iqr,remove_outliers_z
