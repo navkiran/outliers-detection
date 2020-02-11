@@ -6,6 +6,7 @@ Navkiran Singh
 COE17
 Roll number: 101703365
 ```
+## Update in 1.1.0 - command line script method changed, supports calling from both windows and linux terminal 
 Takes two inputs - filename of input csv, intended filename of output csv. 
 
 Two optional arguments - which must be provided together or left out.

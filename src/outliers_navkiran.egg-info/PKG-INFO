@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: outliers-navkiran
-Version: 1.0.4
+Version: 1.1.0
 Summary: Outlier Removal Using Z-score or IQR
 Home-page: https://github.com/navkiran/outliers_navkiran
 Author: Navkiran Singh
@@ -14,6 +14,7 @@ Description: # Library for removing outliers from pandas dataframe
         COE17
         Roll number: 101703365
         ```
+        ## Update in 1.1.0 - command line script method changed, supports calling from both windows and linux terminal 
         Takes two inputs - filename of input csv, intended filename of output csv. 
         
         Two optional arguments - which must be provided together or left out.
